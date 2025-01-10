@@ -15,6 +15,7 @@ let students = [
   { name: "Bernard", birth: "1980-21-08" },
 ];
 
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("assets"));
 

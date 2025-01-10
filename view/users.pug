@@ -1,7 +1,7 @@
 extends layout
 
 block title
-  | Users List  
+  | Users List
 
 block content
   h1 List of Users
@@ -9,7 +9,10 @@ block content
     tr
       th Name
       th Date of Birth
+      th Actions
     each student in students
-      tr
+      tr(id=student.name)
         td= student.name
         td= student.birth
+        td
+          button(type="button") Delete
