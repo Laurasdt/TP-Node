@@ -1,15 +1,17 @@
 extends layout
 
 block title
-  | Add a user  
+  | Add a user
 
 block content
   h1 Add a user
-  form(action="/add-user" method="POST", class="box")
+  if error
+    p(class="error")= error
+  form(action="/add-user", method="POST", class="box")
     label(for="name") Name
-    input(type="text" name="name" required)
+    input(type="text", name="name", required)
     br
     label(for="birth") Date
-    input(type="date" name="birth" required)
+    input(type="date", name="birth", placeholder="JJ/MM/AAAA", required)
     br
     button(type="submit") Add

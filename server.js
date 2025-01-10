@@ -2,6 +2,8 @@ const express = require("express");
 require("dotenv").config();
 const { formatBirthDate } = require("./utils/functions");
 const bodyParser = require("body-parser");
+const dayjs = require("dayjs");
+require("dayjs/locale/fr");
 
 const { PORT, HOSTNAME } = process.env;
 
@@ -27,6 +29,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/add-user", (req, res) => {
+  console.log(req.body.birth);
+
   const { name, birth } = req.body;
   if (name && birth) {
     students.push({ name, birth });
@@ -39,6 +43,7 @@ app.get("/users", (req, res) => {
     ...student,
     birth: formatBirthDate(student.birth),
   }));
+  console.log(formattedStudents);
   res.render("users", { students: formattedStudents });
 });
 
