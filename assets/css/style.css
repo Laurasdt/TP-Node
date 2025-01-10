@@ -21,12 +21,8 @@ nav a {
   color: #333;
 }
 
-form {
-  background-color: #ffffff6e;
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  width: 40%;
+h1 {
+  text-align: center;
 }
 
 form label {
@@ -44,17 +40,67 @@ form input {
 }
 
 form button {
-  width: 100px;
+  width: 200px;
+  margin-top: 30px;
   padding: 10px;
-  align-content: end;
   background-color: #000000;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form button:hover {
   transform: scale(1.2);
+}
+
+.box {
+  background-color: #ffffff6e;
+  padding: 50px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+
+th {
+  background-color: #d09ef1;
+  color: #333;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #bbb;
+}
+
+td {
+  background-color: #f9f9f9;
+  padding: 12px;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+table {
+  margin-bottom: 20px;
 }

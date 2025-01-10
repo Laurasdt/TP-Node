@@ -3,10 +3,11 @@ html
   head
     title Add User
     link(rel="stylesheet", href="/css/style.css")
+    link(rel="icon", href="/assets/favicon.png", type="image/png")
   body
     include header
-    h1 Add an user
-    form(action="/add-user" method="POST")
+    h1 Add a user
+    form(action="/add-user" method="POST", class="box")
       label(for="name") Name
       input(type="text" name="name" required)
       br
