@@ -1,16 +1,15 @@
-doctype html
-html
-  head
-    title Users
-    link(rel="stylesheet", href="/css/style.css")
-  body
-    include header
-    h1 List of Users
-    table(class="box")
+extends layout
+
+block title
+  | Users List  
+
+block content
+  h1 List of Users
+  table(class="box")
+    tr
+      th Name
+      th Date of Birth
+    each student in students
       tr
-        th Name
-        th Date of Birth
-      each student in students
-        tr
-          td= student.name
-          td= student.birth
+        td= student.name
+        td= student.birth

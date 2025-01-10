@@ -1,17 +1,15 @@
-doctype html
-html
-  head
-    title Add User
-    link(rel="stylesheet", href="/css/style.css")
-    link(rel="icon", href="/assets/favicon.png", type="image/png")
-  body
-    include header
-    h1 Add a user
-    form(action="/add-user" method="POST", class="box")
-      label(for="name") Name
-      input(type="text" name="name" required)
-      br
-      label(for="birth") Date
-      input(type="date" name="birth" required)
-      br
-      button(type="submit") Add
+extends layout
+
+block title
+  | Add a user  
+
+block content
+  h1 Add a user
+  form(action="/add-user" method="POST", class="box")
+    label(for="name") Name
+    input(type="text" name="name" required)
+    br
+    label(for="birth") Date
+    input(type="date" name="birth" required)
+    br
+    button(type="submit") Add
