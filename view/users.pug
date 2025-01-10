@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Users
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    include header
+    h1 List of Users
+    table
+      tr
+        th Name
+        th Date of Birth
+      each student in students
+        tr
+          td= student.name
+          td= student.birth
